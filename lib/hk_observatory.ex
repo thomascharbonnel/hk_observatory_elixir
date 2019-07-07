@@ -10,6 +10,7 @@ defmodule HkObservatory do
   """
   def weather_warning do
     case weather_warning_str() do
+      'Very Hot Weather Warning cancelled' ++ _ -> :none
       'Very Hot Weather Warning' ++ _ -> :very_hot_weather
       _ -> :unknown
     end
